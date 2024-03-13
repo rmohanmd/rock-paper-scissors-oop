@@ -7,6 +7,8 @@ function MakeRockPaperScissors() {
       this.gameLogic(image.alt);
     })
   );
+  const info = document.querySelector(".info");
+  const result = document.querySelector(".result");
 
   //this function gets the bot's choice
   this.botChoice = function () {
@@ -20,19 +22,17 @@ function MakeRockPaperScissors() {
 
   this.gameLogic = function (playersChoice) {
     let botChoice = this.botChoice();
+    info.innerText = `you played ${playersChoice} & the computer played ${botChoice}`;
 
-    console.log(
-      `you played ${playersChoice} & the computer played ${botChoice}`
-    );
     if (playersChoice === botChoice) {
-      console.log("It's a Tie");
+      result.innerHTML = "It's a Tie";
     } else if (
       (playersChoice === "rock" && botChoice === "scissors") ||
       (playersChoice === "paper" && botChoice === "rock") ||
       (playersChoice === "scissors" && botChoice === "paper")
     ) {
-      console.log("You Win!");
-    } else console.log("You Lose!");
+      result.innerHTML = "You Win!";
+    } else result.innerHTML = "You Lose!";
   };
 }
 
