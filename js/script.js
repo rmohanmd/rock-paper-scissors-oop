@@ -10,9 +10,9 @@ function MakeRockPaperScissors() {
     } else return "scissors";
   };
 
-  this.playersChoice = function (playersChoice) {
-    if (playersChoice === botChoice) {
-    }
+  this.playersChoice = function () {
+    let playersChoice = prompt("Please enter rock, paper or scissors", "rock");
+    return playersChoice;
   };
 }
 
