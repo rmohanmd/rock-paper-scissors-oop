@@ -14,6 +14,24 @@ function MakeRockPaperScissors() {
     let playersChoice = prompt("Please enter rock, paper or scissors", "rock");
     return playersChoice;
   };
+
+  this.gameLogic = function () {
+    let playersChoice = this.playersChoice();
+    let botChoice = this.botChoice();
+
+    console.log(
+      `you played ${playersChoice} & the computer played ${botChoice}`
+    );
+    if (playersChoice === botChoice) {
+      console.log("It's a Tie");
+    } else if (
+      (playersChoice === "rock" && botChoice === "scissors") ||
+      (playersChoice === "paper" && botChoice === "rock") ||
+      (playersChoice === "scissors" && botChoice === "paper")
+    ) {
+      console.log("You Win!");
+    } else console.log("You Lose!");
+  };
 }
 
 const game = new MakeRockPaperScissors();
