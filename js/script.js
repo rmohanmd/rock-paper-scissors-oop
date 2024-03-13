@@ -8,7 +8,7 @@ function MakeRockPaperScissors() {
     })
   );
   const info = document.querySelector(".info");
-  const result = document.querySelector(".result");
+  const result = document.querySelector(".winloss");
 
   //this function gets the bot's choice
   this.botChoice = function () {

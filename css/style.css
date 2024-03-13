@@ -18,3 +18,9 @@ html {
   border: solid 2px black;
   border-radius: 25%;
 }
+
+.results h2 {
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
