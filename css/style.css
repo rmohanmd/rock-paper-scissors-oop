@@ -1,0 +1,8 @@
+.game-images {
+  max-width: 1000px;
+}
+
+.game-images img {
+  max-width: 33%;
+  height: auto;
+}
