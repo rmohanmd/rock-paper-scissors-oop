@@ -1,5 +1,13 @@
 //Create Constructor function for rock-paper-scissors
+
 function MakeRockPaperScissors() {
+  const images = document.querySelectorAll(".game-piece");
+  images.forEach((image) =>
+    image.addEventListener("click", () => {
+      this.gameLogic(image.alt);
+    })
+  );
+
   //this function gets the bot's choice
   this.botChoice = function () {
     let random = Math.random();
@@ -10,13 +18,7 @@ function MakeRockPaperScissors() {
     } else return "scissors";
   };
 
-  this.playersChoice = function () {
-    let playersChoice = prompt("Please enter rock, paper or scissors", "rock");
-    return playersChoice;
-  };
-
-  this.gameLogic = function () {
-    let playersChoice = this.playersChoice();
+  this.gameLogic = function (playersChoice) {
     let botChoice = this.botChoice();
 
     console.log(
